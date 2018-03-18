@@ -29,6 +29,7 @@ map_plotting.create_results_map()
 # Class to take the query data returned and write to json.
 
 #TODOs
+# next page data
 # map drawing
 # - create a kml file to make a map and print a link to the 'searched area' out in the terminal, better yet an image
 # into ./app/data
