@@ -84,14 +84,14 @@ def mp_test():
         _lats.append(d['lat'])
         _longs.append(d['long'])
 
-    print(max(_longs))
     counter = 1
 
     for d in unique_stuff:
-        plt.plot([float(d['long'])], [float(d['lat'])], 'ro')
+        plt.plot([float(d['long'])], [float(d['lat'])], 'o', alpha=0.5,clip_on=False)
         #plt.annotate('{} {}'.format(d['lat'], d['long']), xy=(d['lat'], d['long']), xytext=(d['lat'], d['long']))
         counter += 1
 
     plt.axis([min(_longs), max(_longs),min(_lats),max(_lats)])
-
+    print(counter)
+    plt.axis('off')
     plt.show()
