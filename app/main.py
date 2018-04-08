@@ -13,6 +13,7 @@ import map_plotting
 #   start longitude
 #   finish latitude
 #   finish longitude
+
 coordinates = generate_coordinates.Coordinates(sc[0], sc[1], fc[0], fc[1], distance)
 coordinates.write_coordinates()
 
@@ -25,6 +26,9 @@ query.write_file(query.get_data())
 
 map_plotting.create_searched_area_map()
 map_plotting.create_results_map()
+
+
+map_plotting.mp_test()
 
 # Class to take the query data returned and write to json.
 
