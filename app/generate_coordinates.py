@@ -36,8 +36,8 @@ class Coordinates:
 
 	# function to increase longitude values based on latitudes given
 	def increase_long(self, _start_long, _input_lat):
-		calc = _start_long + (self.distance / self.r_earth) * (180 / pi) / cos(_input_lat * pi / 180)
-		return calc
+		return _start_long + (self.distance / self.r_earth) * (180 / pi) / cos(
+		    _input_lat * pi / 180)
 
 	# given the latitudes we have, create a list of longitudes
 	# and merge them to a new list
@@ -46,9 +46,7 @@ class Coordinates:
 			# create a number of longs relative to the lat we are given and the lenght of lats
 			# create a list of longs relative to this lattitude
 			new_longitude = self.start_longitude
-			new_longs = []
-			new_longs.append(self.start_longitude)
-
+			new_longs = [self.start_longitude]
 			while new_longs[-1] < self.end_longitude:
 				new_longitude = self.increase_long(new_longs[-1], lat)
 				new_longs.append(new_longitude)
